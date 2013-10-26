@@ -1,0 +1,101 @@
+\documentclass[12pt]{article} % use larger type; default would be 10pt
+\usepackage{graphicx,amsmath,subfigure} % support the \includegraphics command and options
+\usepackage[pdftex]{color}
+\usepackage{natbib}
+\usepackage{authblk}
+
+
+\addtolength{\oddsidemargin}{-.5in}%
+\addtolength{\evensidemargin}{-.5in}%
+\addtolength{\textwidth}{1in}%
+\addtolength{\textheight}{1.3in}%
+\addtolength{\topmargin}{-.8in}%
+
+\begin{document}
+
+
+\def\spacingset#1{\renewcommand{\baselinestretch}%
+{#1}\small\normalsize} \spacingset{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \title{\bf Capital One White Page}
+  \author[1]{Marcos Carzolio}
+  \author[1]{Andy Hoegh}
+  \author[1]{Xinran Hu}
+  \author[1]{Lucas Roberts}
+  \author[1]{Yuhyun Song}
+\affil[1]{Department of Statistics, Virginia Tech}
+ \maketitle
+
+\bigskip
+\begin{abstract}
+\noindent
+abstract here....
+\end{abstract}
+
+\noindent%
+{\it Keywords:} 
+\vfill
+
+\newpage
+
+
+\newcommand{\ac}[1]{[{\color{red}\ Andy Says: {\tt #1}}]}
+\newcommand{\xc}[1]{[{\color{red}\ Xinran Says: {\tt #1}}]}
+\newcommand{\lc}[1]{[{\color{red}\ Lucas Says: {\tt #1}}]}
+\newcommand{\mc}[1]{[{\color{red}\ Marcos Says: {\tt #1}}]}
+\newcommand{\yc}[1]{[{\color{red}\ Yuhyun Says: {\tt #1}}]}
+
+\section{Overview of Solution} 
+Our solution is based on...
+\subsection{VP Questions}
+\begin{enumerate}
+\item What defines a relevant merchant for a customer?
+\item How does this tool support the business team's objective for the program?
+\item How would you educate your business partners on the value the tool provides?
+\item How might you evolve your product over time?
+\item What other strategies could your tool support for the credit card or bank business?
+\end{enumerate}
+
+\subsection{Model Considerations}
+\begin{enumerate}
+\item Spending patterns and preferences vary from customer to customer as well as by location, size of household, income level, ect...
+\item Merchant attributes and merchandise attributes play a large role - some merchants are visited infrequently (discretionary / luxury purchases) while others are visited on a regular basis (coffee shops)
+\item Past spend is a great predictor of future spend, but merchants already have this information and identifying previous spenders is not their priority
+\item It is imperative to ensure that our business partners understand our solution, how it adds value and its limitations
+\end{enumerate}
+
+\subsection{Model Considerations}
+\begin{enumerate}
+\item Customer receives offer and redeems one $\rightarrow +\$5$
+\item Customer receives offer and doesn't redeem $\rightarrow -\$3$
+\item No offer extended $\rightarrow -\$1$
+\end{enumerate}
+
+
+\subsection{Judging}
+\begin{enumerate}
+\item Performance of the statistical model evaluated on a validation sample.
+\item Creativity of the candidate variables and intuition behind selected model features
+\item A written proposal, describing how your tool addressed the aforementioned ``VP questions"
+\end {enumerate}
+Teams will score up to 20 points in each category for a maximum score of 60 points, top 5 teams are semi-finalists.
+\ac{Get to Work!}
+
+\section{Data Preparation}
+Much effort was taken to extract meaningful features from the data set.
+\section{Model Building/Selection}
+Several off the shelf classification tools were initially used, then they were refined to achieve better results in this case.
+\section{Model Use Strategy}
+Separate models are constructed for each merchant, then using a specified loss function a decision is made on whether coupons should be issued.  Conditional on a coupon being issued the set of coupons most likely to result in coupon use are issued \ac{There may be structure between the merchants such that the optimal strategy may not be to issue the coupons to the merchants with the highest marginal probabilities} 
+\section{Conclusions/Other Potential Opportunities}
+While the problem is framed through the lens of giving a customer a coupon, the actual modeling scenario is slightly different.  The assumed response of a coupon would be a behavior adjustment that may nudge a customer in a direction they wouldn't otherwise go.  
+\end{document}
+
+
+
+
+
